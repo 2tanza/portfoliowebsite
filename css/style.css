@@ -18,6 +18,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -26,6 +27,7 @@ body {
 /* Layout */
 header {
   background-color: var(--primary-color);
+  font-size: 1rem;
   padding: var(--spacing-unit);
   position: sticky;
   top: 0;
@@ -84,7 +86,6 @@ footer {
   color: white;
   text-align: center;
   padding: var(--spacing-unit);
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -139,6 +140,7 @@ footer {
 
 /* Card Component */
 .card {
+  width: 70%;
   background: white;
   border-radius: 8px;
   padding: 1.5rem;
@@ -203,7 +205,7 @@ textarea:focus {
 }
 
 .image-container {
-  width: 40%; /* Set a fixed width for all images */
+  width: 33%; /* Set a fixed width for all images */
   aspect-ratio: 1 / 1; /* Maintains a square aspect ratio */
   overflow: hidden; /* Ensures excess content is hidden for a cropped look */
   border-radius: 8px; /* Optional: rounds the corners of the image container */
