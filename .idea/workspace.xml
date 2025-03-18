@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b32405a-1001-48ba-bdee-3a66c87ea0bc" name="Changes" comment="added sci oly page, shrunk content">
+      <change afterPath="$PROJECT_DIR$/public/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/activities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hack-kstate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/76007864838__9A207432-ED8B-4725-A9C7-4EF45979AF64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/FTCTop.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/IMG_2422.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/KU_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/KU_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/Tyler_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/actualoldrobottour.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/electricvehicle.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/guyusingchirality.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstate1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstate2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstate4.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstatedisplayfloor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/ku_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/oldrobottour.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/robotaaha.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/robottour.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/tyler_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/tyler_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/gallery/tyler_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/vendor/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/other_projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/science_oly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tyler-jones.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/webpack.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/webpack.config.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/webpack.config.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;2tanza&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/2tanza/portfoliowebsite.git&quot;,
+    &quot;accountId&quot;: &quot;467422ae-aa1f-4dd1-9ab0-431cbe435f51&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2pfLKUFgP4FtytlRwlPILAzV4Yi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/krono/IdeaProjects/portfoliowebsite/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krono\IdeaProjects\portfoliowebsite\public" />
+      <recent name="C:\Users\krono\IdeaProjects\portfoliowebsite\img\gallery" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krono\IdeaProjects\portfoliowebsite\.idea" />
+      <recent name="C:\Users\krono\IdeaProjects\portfoliowebsite" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b32405a-1001-48ba-bdee-3a66c87ea0bc" name="Changes" comment="" />
+      <created>1733152119143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733152119143</updated>
+      <workItem from="1733152120185" duration="91000" />
+      <workItem from="1733152232373" duration="26000" />
+      <workItem from="1733712867120" duration="5733000" />
+      <workItem from="1734019085315" duration="7221000" />
+      <workItem from="1735193350616" duration="373000" />
+      <workItem from="1735237393048" duration="12000" />
+      <workItem from="1735240094658" duration="648000" />
+      <workItem from="1742178322531" duration="17225000" />
+    </task>
+    <task id="LOCAL-00001" summary="grammar on about me">
+      <option name="closed" value="true" />
+      <created>1733712949779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733712949779</updated>
+    </task>
+    <task id="LOCAL-00002" summary="grammar on about me">
+      <option name="closed" value="true" />
+      <created>1742178604913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742178604913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="grammar on about me">
+      <option name="closed" value="true" />
+      <created>1742178694124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742178694124</updated>
+    </task>
+    <task id="LOCAL-00004" summary="grammar on about me">
+      <option name="closed" value="true" />
+      <created>1742188707499</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742188707499</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added images and other content">
+      <option name="closed" value="true" />
+      <created>1742192522644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742192522645</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added sci oly page, shrunk content">
+      <option name="closed" value="true" />
+      <created>1742194923980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742194923980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="grammar on about me" />
+    <MESSAGE value="added images and other content" />
+    <MESSAGE value="added sci oly page, shrunk content" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sci oly page, shrunk content" />
+  </component>
+</project>
