@@ -4,60 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b32405a-1001-48ba-bdee-3a66c87ea0bc" name="Changes" comment="added sci oly page, shrunk content">
-      <change afterPath="$PROJECT_DIR$/public/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/activities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/hack-kstate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/76007864838__9A207432-ED8B-4725-A9C7-4EF45979AF64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/FTCTop.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/IMG_2422.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/KU_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/KU_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/Tyler_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/actualoldrobottour.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/electricvehicle.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/guyusingchirality.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstate1.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstate2.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstate4.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/hackkstatedisplayfloor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/ku_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/oldrobottour.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/robotaaha.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/robottour.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/tyler_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/tyler_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/gallery/tyler_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vendor/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/other_projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/project_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/science_oly.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tyler-jones.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/webpack.config.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/webpack.config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6b32405a-1001-48ba-bdee-3a66c87ea0bc" name="Changes" comment="Competely moved and fixed images hopefully" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,23 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/krono/IdeaProjects/portfoliowebsite/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/krono/IdeaProjects/portfoliowebsite/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\krono\IdeaProjects\portfoliowebsite\public" />
@@ -148,6 +95,7 @@
       <workItem from="1735237393048" duration="12000" />
       <workItem from="1735240094658" duration="648000" />
       <workItem from="1742178322531" duration="17225000" />
+      <workItem from="1742267924671" duration="380000" />
     </task>
     <task id="LOCAL-00001" summary="grammar on about me">
       <option name="closed" value="true" />
@@ -197,16 +145,44 @@
       <option name="project" value="LOCAL" />
       <updated>1742194923980</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Competely moved and fixed images hopefully">
+      <option name="closed" value="true" />
+      <created>1742268009480</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742268009480</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Competely moved and fixed images hopefully">
+      <option name="closed" value="true" />
+      <created>1742268081358</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742268081358</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="grammar on about me" />
     <MESSAGE value="added images and other content" />
     <MESSAGE value="added sci oly page, shrunk content" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sci oly page, shrunk content" />
+    <MESSAGE value="Competely moved and fixed images hopefully" />
+    <option name="LAST_COMMIT_MESSAGE" value="Competely moved and fixed images hopefully" />
   </component>
 </project>
