@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b32405a-1001-48ba-bdee-3a66c87ea0bc" name="Changes" comment="wrote some new descriptions for FTC page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+    <list default="true" id="6b32405a-1001-48ba-bdee-3a66c87ea0bc" name="Changes" comment="centered cards and fixed captions">
+      <change beforePath="$PROJECT_DIR$/public/hack-kstate.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/hack-kstate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +104,7 @@
       <workItem from="1742178322531" duration="17225000" />
       <workItem from="1742267924671" duration="1064000" />
       <workItem from="1742824193845" duration="43000" />
-      <workItem from="1742824242619" duration="1437000" />
+      <workItem from="1742824242619" duration="2236000" />
     </task>
     <task id="LOCAL-00001" summary="grammar on about me">
       <option name="closed" value="true" />
@@ -195,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742825372066</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="centered cards and fixed captions">
+      <option name="closed" value="true" />
+      <created>1742825821985</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742825821985</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +226,7 @@
     <MESSAGE value="Competely moved and fixed images hopefully" />
     <MESSAGE value="typo" />
     <MESSAGE value="wrote some new descriptions for FTC page" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote some new descriptions for FTC page" />
+    <MESSAGE value="centered cards and fixed captions" />
+    <option name="LAST_COMMIT_MESSAGE" value="centered cards and fixed captions" />
   </component>
 </project>
