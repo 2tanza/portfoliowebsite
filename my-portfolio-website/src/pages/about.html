@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4a9eff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: #4a9eff;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(30, 30, 30, 0.98);
+            min-width: 200px;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border: 1px solid #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(74, 158, 255, 0.1);
+            color: #4a9eff;
+        }
+
+        .about-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4a9eff 0%, #7b68ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .about-header p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: start;
+        }
+
+        .profile-image {
+            position: relative;
+        }
+
+        .profile-image-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, rgba(74, 158, 255, 0.2) 0%, rgba(123, 104, 238, 0.2) 100%);
+            border-radius: 12px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #4a9eff;
+        }
+
+        .profile-text h2 {
+            color: #4a9eff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-text p {
+            color: #c0c0c0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .values-section {
+            margin-bottom: 4rem;
+        }
+
+        .values-section h2 {
+            color: #4a9eff;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: rgba(30, 30, 30, 0.6);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: #4a9eff;
+            box-shadow: 0 8px 24px rgba(74, 158, 255, 0.2);
+        }
+
+        .value-card h3 {
+            color: #4a9eff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .value-icon {
+            font-size: 1.8rem;
+        }
+
+        .value-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+
+        .personal-section {
+            background: rgba(30, 30, 30, 0.4);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+            margin-bottom: 4rem;
+        }
+
+        .personal-section h2 {
+            color: #4a9eff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .personal-section p {
+            color: #c0c0c0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .skills-interests {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .skills-interests h3 {
+            color: #7b68ee;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-interests ul {
+            list-style: none;
+            color: #b0b0b0;
+        }
+
+        .skills-interests li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .skills-interests li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #4a9eff;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(74, 158, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(74, 158, 255, 0.2);
+        }
+
+        .cta-section h2 {
+            color: #4a9eff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: #4a9eff;
+            color: #0a0a0a;
+        }
+
+        .btn:hover {
+            background: #3a8eef;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(74, 158, 255, 0.3);
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: #808080;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            color: #4a9eff;
+        }
+
+        @media (max-width: 968px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-interests {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Reid Ellis</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/src/pages/about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/src/pages/projects.html">Projects ▾</a>
+                    <div class="dropdown-content">
+                        <a href="/src/pages/tyler.html">Sports Prosthetic</a>
+                        <a href="/src/pages/hack-k-state2024.html">Hack K-State 2024</a>
+                        <a href="project3.html">Project Name 3</a>
+                        <a href="project4.html">Project Name 4</a>
+                        <a href="project5.html">Project Name 5</a>
+                    </div>
+                </li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about-header">
+        <h1>About Me</h1>
+        <p>What drives me, who I aspire to be, and what I want you to know</p>
+    </div>
+
+    <div class="content-section">
+        <div class="profile-section">
+            <div class="profile-image">
+                <div class="profile-image-placeholder">👤</div>
+            </div>
+            <div class="profile-text">
+                <h2>Hello, I'm Reid Ellis</h2>
+                <p>
+                    I'm a Computer Science and Cybersecurity Major driven by curiosity and a passion for creating things. 
+                    Whether I'm writing code, designing prosthetics, or building competition robots, 
+                    I approach every challenge with the same goal: Learn something new, create something novel.
+                </p>
+                <p>
+                    What matters most to me is that I am always learning new things, and making an impact on the world. I believe that the best 
+                    projects comes from understanding not just how things work, but why they matter and who they serve.
+                </p>
+                <p>
+                    My journey spans from engineering projects like competitive robotics and Science Olympiad to computer science projects 
+                    like machine learning and web development. Each project teaches me something new about problem-solving, collaboration, 
+                    and pushing beyond my comfort zone.
+                </p>
+            </div>
+        </div>
+
+        <div class="values-section">
+            <h2>What I Value</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3><span class="value-icon">🔄</span> Continuous Growth</h3>
+                    <p>
+                        My dream is to learn as a career, and as a hobby. Stepping into the real world and constantly expanding my knowledge, 
+                        while working with people who are learning along side me, sounds like the perfect life. 
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3><span class="value-icon">🤝</span> Collaboration & Community</h3>
+                    <p>
+                        The best solutions come from diverse perspectives. My greatest learning experiences come from projects like hackathons, 
+                        FIRST robotics, and project based classes where I was learning alongside my friends and mentors.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3><span class="value-icon">⚡</span> Innovation Through Action</h3>
+                    <p>
+                        To innovate is to learn. Learing new ways of solving problems, discovering problems we didn't even know
+                        existed yet, and then solving them. The best way to learn and innovate is through the creation of projects that challenge 
+                        you and lead to the development of new projects. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="personal-section">
+            <h2>Beyond the Code</h2>
+            <p>
+                I enjoy creating things, whether it is debugging an application for a hackathon, or spending hours in Blender and OnShape to 
+                create prosthetic molds, it is incredibly satisfying to work on something to learn something new. 
+            </p>
+            <p>
+                I believe in building things that last and matter. That means writing clean, maintainable code. Designing with 
+                the end user in mind. Testing thoroughly. Documenting clearly. The details matter because they're what separate
+                 a finished project from an abandoned experiment.
+                I believe in a sustainable problem solving community.
+            </p>
+            <p>
+                Outside of my technical work, I'm driven by the same curiosity that fuels my projects. I'm always exploring new 
+                technologies, reading about emerging fields, and looking for connections between seemingly unrelated disciplines. 
+                Some of my best insights have come from unexpected places.
+            </p>
+
+            <div class="skills-interests">
+                <div>
+                    <h3>Technical Skills I'm Developing</h3>
+                    <ul>
+                        <li>Full-stack web development</li>
+                        <li>Machine learning & AI</li>
+                        <li>Game design & development</li>
+                        <li>CAD modeling & 3D design</li>
+                        <li>Embedded systems & robotics</li>
+                        <li>Data structures & algorithms</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Interests & Explorations</h3>
+                    <ul>
+                        <li>Assistive technology design</li>
+                        <li>Competitive robotics</li>
+                        <li>Human-computer interaction</li>
+                        <li>Open-source contribution</li>
+                        <li>Technical writing & documentation</li>
+                        <li>Problem-solving competitions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Let's Connect</h2>
+            <p>Interested in collaborating or just want to chat about engineering and technology?</p>
+            <a href="projects.html" class="btn">See My Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/2tanza" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/reid-ellis-a779aa321" target="_blank">LinkedIn</a>
+            <a href="mailto:your.reidsreeling13@gmail.com">Email</a>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Reid Ellis. All rights reserved.</p>
+    </footer>
+</body>
+</html>

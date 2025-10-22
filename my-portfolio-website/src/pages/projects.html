@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4a9eff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: #4a9eff;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(30, 30, 30, 0.98);
+            min-width: 200px;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border: 1px solid #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(74, 158, 255, 0.1);
+            color: #4a9eff;
+        }
+
+        .projects-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .projects-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4a9eff 0%, #7b68ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .projects-header p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .filter-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(30, 30, 30, 0.6);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #b0b0b0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            border-color: #4a9eff;
+            color: #4a9eff;
+            background: rgba(74, 158, 255, 0.1);
+        }
+
+        .filter-btn.active {
+            background: #4a9eff;
+            color: #0a0a0a;
+            border-color: #4a9eff;
+        }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(30, 30, 30, 0.6);
+            border-radius: 12px;
+            border: 1px solid #333;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #4a9eff;
+            box-shadow: 0 12px 32px rgba(74, 158, 255, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, rgba(74, 158, 255, 0.3) 0%, rgba(123, 104, 238, 0.3) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-bottom: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-image::after {
+            opacity: 1;
+        }
+
+        .project-tags {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            z-index: 1;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid #4a9eff;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #4a9eff;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #4a9eff;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .project-description {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: #7b68ee;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #4a9eff;
+        }
+
+        .view-more {
+            color: #4a9eff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: #808080;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            color: #4a9eff;
+        }
+
+        @media (max-width: 768px) {
+            .projects-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .filter-section {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Hide/show projects based on filter */
+        .project-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Reid Ellis</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/src/pages/projects.html">Projects ▾</a>
+                    <div class="dropdown-content">
+                        <a href="/src/pages/tyler.html">Sports Prosthetic</a>
+                        <a href="/src/pages/hack-k-state2024.html">Hack K-State 2024</a>
+                        <a href="project3.html">Project Name 3</a>
+                        <a href="project4.html">Project Name 4</a>
+                        <a href="project5.html">Project Name 5</a>
+                    </div>
+                </li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="projects-header">
+        <h1>My Projects</h1>
+        <p>A collection of work spanning software development, engineering builds, and creative problem-solving</p>
+    </div>
+
+    <div class="filter-section">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="game">Game Design</button>
+        <button class="filter-btn" data-filter="hardware">Hardware/Build</button>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Project Card 1 - Web Development Example -->
+        <div class="project-card" data-category="web">
+            <div class="project-image">
+                <div class="project-tags">
+                    <span class="tag">Web Dev</span>
+                    <span class="tag">React</span>
+                </div>
+                🌐
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Interactive Web Application</h3>
+                <p class="project-description">
+                    A full-stack web application featuring real-time data visualization and user authentication. Built with modern frameworks and deployed on cloud infrastructure.
+                </p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project" class="project-link" target="_blank">
+                            GitHub →
+                        </a>
+                        <a href="#" class="project-link">Live Demo →</a>
+                    </div>
+                    <a href="project1.html" class="view-more">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 2 - Machine Learning Example -->
+        <div class="project-card" data-category="ml">
+            <div class="project-image">
+                <div class="project-tags">
+                    <span class="tag">ML</span>
+                    <span class="tag">Python</span>
+                </div>
+                🤖
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Predictive Model System</h3>
+                <p class="project-description">
+                    Machine learning pipeline for analyzing complex datasets and generating predictions. Implemented custom algorithms and trained on real-world data.
+                </p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project" class="project-link" target="_blank">
+                            GitHub →
+                        </a>
+                    </div>
+                    <a href="project2.html" class="view-more">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 3 - Game Design Example -->
+        <div class="project-card" data-category="game">
+            <div class="project-image">
+                <div class="project-tags">
+                    <span class="tag">Game Dev</span>
+                    <span class="tag">Unity</span>
+                </div>
+                🎮
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">2D Puzzle Adventure Game</h3>
+                <p class="project-description">
+                    An original puzzle-platformer featuring custom physics, level design, and narrative elements. Includes original art assets and sound design.
+                </p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project" class="project-link" target="_blank">
+                            GitHub →
+                        </a>
+                        <a href="#" class="project-link">Play →</a>
+                    </div>
+                    <a href="project3.html" class="view-more">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 4 - Hardware Example -->
+        <div class="project-card" data-category="hardware">
+            <div class="project-image">
+                <div class="project-tags">
+                    <span class="tag">Hardware</span>
+                    <span class="tag">CAD</span>
+                </div>
+                🦾
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Prosthetic Hand Development</h3>
+                <p class="project-description">
+                    Design and prototyping of a functional prosthetic hand with custom grip mechanisms. Focused on accessibility, affordability, and user-centered design.
+                </p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="#" class="project-link">CAD Files →</a>
+                    </div>
+                    <a href="project4.html" class="view-more">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 5 - Hardware/Competition Example -->
+        <div class="project-card" data-category="hardware">
+            <div class="project-image">
+                <div class="project-tags">
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Competition</span>
+                </div>
+                🏆
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Science Olympiad Robot</h3>
+                <p class="project-description">
+                    Competition robot designed for precision tasks under time constraints. Integrated mechanical design, electronics, and autonomous programming.
+                </p>
+                <div class="project-footer">
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project" class="project-link" target="_blank">
+                            Code →
+                        </a>
+                    </div>
+                    <a href="project5.html" class="view-more">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- You can easily add more project cards here following the same structure -->
+        
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/2tanza" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/reid-ellis-a779aa321" target="_blank">LinkedIn</a>
+            <a href="mailto:your.reidsreeling13@gmail.com">Email</a>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Reid Ellis. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.getAttribute('data-category') === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

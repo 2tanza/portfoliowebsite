@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4a9eff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: #4a9eff;
+        }
+
+        .back-link {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 0 2rem;
+        }
+
+        .back-link a {
+            color: #7b68ee;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: #4a9eff;
+        }
+
+        .project-hero {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(74, 158, 255, 0.3) 0%, rgba(123, 104, 238, 0.3) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-header {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4a9eff 0%, #7b68ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #b0b0b0;
+        }
+
+        .meta-label {
+            color: #7b68ee;
+            font-weight: 600;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            padding: 0.5rem 1rem;
+            background: rgba(74, 158, 255, 0.1);
+            border: 1px solid #4a9eff;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #4a9eff;
+            font-weight: 600;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            color: #c0c0c0;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #4a9eff;
+            color: #0a0a0a;
+        }
+
+        .btn-primary:hover {
+            background: #3a8eef;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(74, 158, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #4a9eff;
+            border: 2px solid #4a9eff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(74, 158, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #4a9eff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-content {
+            background: rgba(30, 30, 30, 0.6);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+            margin-bottom: 3rem;
+        }
+
+        .section-content p {
+            color: #c0c0c0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .section-content ul {
+            list-style: none;
+            color: #c0c0c0;
+        }
+
+        .section-content li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .section-content li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #4a9eff;
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-category {
+            background: rgba(20, 20, 20, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .tech-category h4 {
+            color: #7b68ee;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .tech-category ul {
+            list-style: none;
+        }
+
+        .tech-category li {
+            padding: 0.4rem 0;
+            color: #b0b0b0;
+            padding-left: 1.2rem;
+        }
+
+        .tech-category li:before {
+            content: "•";
+            color: #4a9eff;
+            font-weight: bold;
+            left: 0;
+        }
+
+        .code-block {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .code-title {
+            color: #7b68ee;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .code-lang {
+            color: #6e7681;
+            font-size: 0.85rem;
+        }
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(30, 30, 30, 0.98);
+            min-width: 200px;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border: 1px solid #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(74, 158, 255, 0.1);
+            color: #4a9eff;
+        }
+
+        pre {
+            margin: 0;
+            color: #c9d1d9;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .keyword { color: #ff7b72; }
+        .function { color: #d2a8ff; }
+        .string { color: #a5d6ff; }
+        .comment { color: #8b949e; }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: rgba(20, 20, 20, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #4a9eff;
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            color: #4a9eff;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .screenshots-carousel {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 1.5rem 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .screenshot {
+            flex: 0 0 500px;
+            height: 350px;
+            background: rgba(20, 20, 20, 0.6);
+            border-radius: 8px;
+            border: 1px solid #333;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #7b68ee;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .screenshot-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 2rem 1rem 1rem;
+            color: #e0e0e0;
+        }
+
+        .challenges-list {
+            margin-top: 1.5rem;
+        }
+
+        .challenge-item {
+            background: rgba(20, 20, 20, 0.4);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #4a9eff;
+            margin-bottom: 1.5rem;
+        }
+
+        .challenge-title {
+            color: #4a9eff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .challenge-description {
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .challenge-solution {
+            color: #c0c0c0;
+            line-height: 1.7;
+            padding-left: 1.5rem;
+            border-left: 2px solid #7b68ee;
+        }
+
+        .solution-label {
+            color: #7b68ee;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .metric-card {
+            background: rgba(74, 158, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(74, 158, 255, 0.2);
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            color: #4a9eff;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: #808080;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+
+            .hero-image {
+                height: 300px;
+                font-size: 3rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .screenshot {
+                flex: 0 0 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Reid Ellis</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/src/pages/projects.html">Projects ▾</a>
+                    <div class="dropdown-content">
+                        <a href="/src/pages/tyler.html">Sports Prosthetic</a>
+                        <a href="/src/pages/hack-k-state2024.html">Hack K-State 2024</a>
+                        <a href="project3.html">Project Name 3</a>
+                        <a href="project4.html">Project Name 4</a>
+                        <a href="project5.html">Project Name 5</a>
+                    </div>
+                </li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-link">
+        <a href="projects.html">← Back to Projects</a>
+    </div>
+
+    <div class="project-hero">
+        <div class="hero-image">
+            <!-- Replace with actual hero image: <img src="your-image.jpg" alt="Project hero"> -->
+            💻
+        </div>
+    </div>
+
+    <div class="project-header">
+        <h1 class="project-title">Interactive Web Application</h1>
+        
+        <div class="project-meta">
+            <div class="meta-item">
+                <span class="meta-label">Timeline:</span>
+                <span>June 2024 - August 2024</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Role:</span>
+                <span>Full-Stack Developer</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Status:</span>
+                <span>Live & Deployed</span>
+            </div>
+        </div>
+
+        <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">AWS</span>
+        </div>
+
+        <p class="project-description">
+            A full-featured web application that enables real-time collaboration and data visualization. Built with modern technologies and best practices, this project demonstrates end-to-end development from database design to responsive UI implementation.
+        </p>
+
+        <div class="project-links">
+            <a href="https://github.com/yourusername/project" class="btn btn-primary" target="_blank">View on GitHub</a>
+            <a href="#" class="btn btn-secondary">Live Demo</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🎯 Project Overview</h2>
+        <div class="section-content">
+            <p>
+                This application was built to solve a specific problem: coordinating team activities and visualizing progress in real-time. Traditional solutions were either too complex or lacked the flexibility needed for diverse use cases.
+            </p>
+            <p>
+                The platform features a clean, intuitive interface that works seamlessly across devices, real-time updates using WebSockets, and a robust backend that handles data processing and authentication. Every component was designed with scalability and maintainability in mind.
+            </p>
+            <p>
+                The project serves over 200 active users and processes thousands of requests daily, demonstrating both technical capability and practical utility.
+            </p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">⚙️ Key Features</h2>
+        <div class="section-content">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h4>Real-Time Sync</h4>
+                    <p>WebSocket-based live updates ensure all users see changes instantly without page refreshes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h4>Data Visualization</h4>
+                    <p>Interactive charts and graphs powered by D3.js provide clear insights into trends and patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h4>Secure Authentication</h4>
+                    <p>JWT-based auth with role-based access control and secure password hashing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h4>Responsive Design</h4>
+                    <p>Fully responsive interface that works flawlessly on desktop, tablet, and mobile devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Optimized Performance</h4>
+                    <p>Code splitting, lazy loading, and caching strategies ensure fast load times.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <h4>Comprehensive Testing</h4>
+                    <p>Unit tests, integration tests, and E2E tests maintain code quality and prevent regressions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🛠️ Tech Stack</h2>
+        <div class="section-content">
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>React with TypeScript</li>
+                        <li>Redux for state management</li>
+                        <li>Styled Components</li>
+                        <li>D3.js for visualizations</li>
+                        <li>Socket.io client</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>Node.js with Express</li>
+                        <li>PostgreSQL database</li>
+                        <li>Socket.io server</li>
+                        <li>JWT authentication</li>
+                        <li>RESTful API design</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>DevOps & Tools</h4>
+                    <ul>
+                        <li>AWS EC2 & RDS</li>
+                        <li>Docker containers</li>
+                        <li>GitHub Actions CI/CD</li>
+                        <li>Jest & React Testing Library</li>
+                        <li>ESLint & Prettier</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">💻 Code Highlights</h2>
+        <div class="section-content">
+            <p>Here are some interesting implementation details from the project:</p>
+            
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-title">Real-time WebSocket Handler</span>
+                    <span class="code-lang">TypeScript</span>
+                </div>
+                <pre><span class="comment">// Custom hook for WebSocket connection with automatic reconnection</span>
+<span class="keyword">const</span> <span class="function">useRealtimeData</span> = (roomId: <span class="keyword">string</span>) => {
+  <span class="keyword">const</span> [data, setData] = <span class="function">useState</span>(<span class="keyword">null</span>);
+  <span class="keyword">const</span> socketRef = <span class="function">useRef</span>(<span class="keyword">null</span>);
+
+  <span class="function">useEffect</span>(() => {
+    socketRef.current = <span class="function">io</span>(<span class="string">'wss://api.example.com'</span>);
+    
+    socketRef.current.<span class="function">emit</span>(<span class="string">'join-room'</span>, roomId);
+    
+    socketRef.current.<span class="function">on</span>(<span class="string">'data-update'</span>, (update) => {
+      <span class="function">setData</span>((prev) => <span class="function">mergeData</span>(prev, update));
+    });
+
+    <span class="keyword">return</span> () => socketRef.current.<span class="function">disconnect</span>();
+  }, [roomId]);
+
+  <span class="keyword">return</span> data;
+};</pre>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-title">Database Query Optimization</span>
+                    <span class="code-lang">SQL</span>
+                </div>
+                <pre><span class="comment">-- Optimized query with joins and indexing for fast data retrieval</span>
+<span class="keyword">SELECT</span> u.name, u.email, 
+       <span class="function">COUNT</span>(a.id) <span class="keyword">as</span> activity_count,
+       <span class="function">MAX</span>(a.created_at) <span class="keyword">as</span> last_active
+<span class="keyword">FROM</span> users u
+<span class="keyword">LEFT JOIN</span> activities a <span class="keyword">ON</span> u.id = a.user_id
+<span class="keyword">WHERE</span> a.created_at > <span class="function">NOW</span>() - <span class="string">INTERVAL '30 days'</span>
+<span class="keyword">GROUP BY</span> u.id, u.name, u.email
+<span class="keyword">ORDER BY</span> activity_count <span class="keyword">DESC</span>
+<span class="keyword">LIMIT</span> <span class="string">100</span>;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📸 Screenshots & Demo</h2>
+        <div class="section-content">
+            <div class="screenshots-carousel">
+                <div class="screenshot">
+                    <span>🏠</span>
+                    <div class="screenshot-label">Dashboard Overview</div>
+                </div>
+                <div class="screenshot">
+                    <span>📊</span>
+                    <div class="screenshot-label">Real-time Analytics</div>
+                </div>
+                <div class="screenshot">
+                    <span>👥</span>
+                    <div class="screenshot-label">Team Collaboration View</div>
+                </div>
+                <div class="screenshot">
+                    <span>⚙️</span>
+                    <div class="screenshot-label">Settings & Configuration</div>
+                </div>
+                <div class="screenshot">
+                    <span>📱</span>
+                    <div class="screenshot-label">Mobile Responsive Design</div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; color: #808080; font-size: 0.9rem;">Scroll horizontally to view all screenshots →</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">🚧 Challenges & Solutions</h2>
+        <div class="section-content">
+            <div class="challenges-list">
+                <div class="challenge-item">
+                    <div class="challenge-title">⚡ Challenge: WebSocket Connection Stability</div>
+                    <div class="challenge-description">
+                        Initially struggled with dropped connections and synchronization issues when users experienced poor network conditions or when scaling to multiple servers.
+                    </div>
+                    <div class="challenge-solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        Implemented automatic reconnection logic with exponential backoff, added Redis as a pub/sub layer for multi-server coordination, and included offline state handling with queue-based message replay on reconnection.
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-title">🎨 Challenge: Complex State Management</div>
+                    <div class="challenge-description">
+                        Managing shared state across multiple components became unwieldy, leading to prop drilling and difficult-to-debug state inconsistencies.
+                    </div>
+                    <div class="challenge-solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        Migrated to Redux with normalized state structure. Created action creators and selectors to encapsulate business logic, and used Redux DevTools for time-travel debugging during development.
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-title">🔍 Challenge: Database Performance at Scale</div>
+                    <div class="challenge-description">
+                        As data volume grew, certain queries began taking multiple seconds to complete, creating a poor user experience and timeout errors.
+                    </div>
+                    <div class="challenge-solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        Added strategic database indexes on frequently queried columns, implemented query result caching with Redis, and optimized complex queries by reducing joins and utilizing materialized views for aggregated data.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">💡 What I Learned</h2>
+        <div class="section-content">
+            <p>
+                This project pushed me to think holistically about full-stack development. It's one thing to build features that work in isolation, but ensuring they work together seamlessly under real-world conditions taught me invaluable lessons about architecture and design.
+            </p>
+            <p>
+                Performance optimization became a central focus. I learned to profile applications, identify bottlenecks, and implement targeted improvements. Small changes like adding database indexes or implementing code splitting had dramatic impacts on user experience.
+            </p>
+            <p>
+                Perhaps most importantly, I developed a deeper appreciation for testing and CI/CD. Automated tests caught bugs before they reached users, and continuous deployment meant I could iterate rapidly based on feedback.
+            </p>
+            <p><strong>Key Skills Developed:</strong></p>
+            <ul>
+                <li>Full-stack application architecture and design patterns</li>
+                <li>Real-time communication with WebSockets</li>
+                <li>Database design, optimization, and query performance</li>
+                <li>Cloud deployment and DevOps practices</li>
+                <li>Security best practices (authentication, authorization, input validation)</li>
+                <li>Responsive UI development and accessibility</li>
+                <li>Testing strategies (unit, integration, E2E)</li>
+                <li>Git workflow and collaborative development</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">📈 Impact & Metrics</h2>
+        <div class="section-content">
+            <div class="impact-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">200+</div>
+                    <div class="metric-label">Active Users</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">5k+</div>
+                    <div class="metric-label">Daily Requests</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">98%</div>
+                    <div class="metric-label">Uptime</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">&lt;2s</div>
+                    <div class="metric-label">Avg Load Time</div>
+                </div>
+            </div>
+            <p style="margin-top: 2rem;">
+                The application has been in production for six months with consistent growth in user adoption. Positive feedback highlights the intuitive interface and reliability of real-time features. The codebase is maintained with 85% test coverage and continues to receive feature updates based on user needs.
+            </p>
+        </div>
+    </div>
+        <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+    </body>
+</html>
